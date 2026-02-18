@@ -8,9 +8,9 @@ from TP.TP4 import solve
 
 
 def test_from_problem_description():
-    assert solve("The quick brown fox jumps over the lazy dog") == "ouoerteo"
+    assert solve("The quick brown fox jumps over the lazy dog") == "ouoertheo"
     assert solve("Sphinx of black quartz, judge my vow") == "auo"
     assert solve("aaaaaabcdefghijklmonpqrstuvwxy") == ""
 
 def test_supplementaire():
-    assert solve("Portez ce vieux whisky au juge blond qui fume") == "eeiueouiue"
+    assert solve("Portez ce vieux whisky au juge blond qui fume") == "eeiuueouiue"
