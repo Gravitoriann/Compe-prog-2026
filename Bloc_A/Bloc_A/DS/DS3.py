@@ -13,7 +13,10 @@ def solve(memory: list[str], start: int):
     """
     resultat = []
     ### YOUR CODE GOES HERE ###
-
-
+    current = start
+    while current != -1:
+        t = memory[current]
+        resultat.append(t[0])
+        current = t[1]
 
     return resultat
