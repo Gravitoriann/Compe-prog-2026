@@ -1,5 +1,4 @@
 ## This is the template for TP1, full problem in the rulebook ##
-import numpy as np
 
 def solve(message: str):
     """
