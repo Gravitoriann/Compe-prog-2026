@@ -13,7 +13,22 @@ def solve(pangram: str):
     duplicates = ""
     ## YOUR CODE GOES HERE ##
     ## VOTRE CODE VA ICI ##
-
-
+    pangram = pangram.lower()
+    caracts = set(pangram)
+    if " " in caracts:
+        caracts.remove(" ")
+    if "," in caracts:
+        caracts.remove(",")
+    used = set()
+    repetes = []
+    if len(caracts) >= 26:
+        for lettre in pangram:
+            if lettre == " " or lettre == ",":
+                continue
+            if lettre not in used:
+                used.add(lettre)
+            else:
+                repetes.append(lettre)
+        duplicates = "".join(repetes)
 
     return duplicates
