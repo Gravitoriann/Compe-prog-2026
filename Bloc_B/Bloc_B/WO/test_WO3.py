@@ -18,7 +18,7 @@ def test_from_problem_description():
 
     distance = 130
     scores = [20, 20, 19, 18, 17]
-    assert solve(distance. scores) == 317
+    assert solve(distance, scores) == 317
 
     
 def test_supplementaire():
