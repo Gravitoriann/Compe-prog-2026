@@ -13,6 +13,11 @@ def solve(distance: int, scores: list[int]):
     """
     total_score = 0
 
-    
+    total_score += distance*2
+    scores.sort()
+    scores.pop(0)
+    scores.pop()
+    for score in scores:
+        total_score += score
 
     return total_score
