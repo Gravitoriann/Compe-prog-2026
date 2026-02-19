@@ -1,5 +1,6 @@
 ## This is the template for MY2, full problem in the rulebook ##
 
+
 def solve(thunder_1: tuple[float, float], thunder_2: tuple[float, float]) -> float:
     """
     Find the closest possible distance between the 2 observers regarding the time they hear both thunders.
@@ -14,6 +15,10 @@ def solve(thunder_1: tuple[float, float], thunder_2: tuple[float, float]) -> flo
     SPEED_OF_SOUND = 340  # m/s
     LIGHTNING_DISTANCE = 4000  # 4 km in meters
     distance = 0
+
+    p1 = (((((thunder_1[0]*SPEED_OF_SOUND)**2)-((thunder_2[0]*SPEED_OF_SOUND)**2)+16000000)/(8000)), ((((thunder_1[0]*SPEED_OF_SOUND)**2)-((((thunder_1[0]*SPEED_OF_SOUND)**2)-((thunder_2[0]*SPEED_OF_SOUND)**2)+16000000)/(8000))**2)**0.5))
+    p2 = (((((thunder_1[1]*SPEED_OF_SOUND)**2)-((thunder_2[1]*SPEED_OF_SOUND)**2)+16000000)/(8000)), ((((thunder_1[1]*SPEED_OF_SOUND)**2)-((((thunder_1[1]*SPEED_OF_SOUND)**2)-((thunder_2[1]*SPEED_OF_SOUND)**2)+16000000)/(8000))**2)**0.5))
+    distance = round((((p2[0]-p1[0])**2 + (p2[1]-p1[1])**2)**0.5),2)
 
 
     return distance
