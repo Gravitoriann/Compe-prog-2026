@@ -34,7 +34,14 @@ def solve(toys: list[ToyInfo], age: int, category: Category):
     selected_toys = []
     ## YOUR CODE GOES HERE ##
     ## VOTRE CODE VA ICI ##
-
-
+    toys_valides = []
+    id_price = []
+    for toy in toys:
+        if toy.category == category and toy.min_age <= age and toy.max_age >= age:
+            toys_valides.append(toy)
+            id_price.append((toy.id, toy.price))
+    id_price.sort(key= lambda t:t[1])
+    for t in id_price:
+        selected_toys.append(t[0])
 
     return selected_toys
