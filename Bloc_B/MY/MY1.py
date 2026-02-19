@@ -12,6 +12,10 @@ def solve(whirlpoool: float, positions: list[tuple[float, float]]):
         int: The number of ships that are safe
     """
     nbr_safe = 0
+    for pos in positions:
+        if (pos[0]**2 + pos[1]**2)**0.5 > whirlpoool +0.15:
+            nbr_safe +=1
+
 
     
 
