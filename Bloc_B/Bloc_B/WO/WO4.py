@@ -13,6 +13,13 @@ def solve(ratings: list[int], team: int):
     """
     best_position = 0
 
-    
+    if team == 0:
+        best_position = 1
+    elif team <= 8:
+        best_position = 2
+    elif team <= 10:
+        best_position = 3
+    else:
+        best_position = 0
 
     return best_position
