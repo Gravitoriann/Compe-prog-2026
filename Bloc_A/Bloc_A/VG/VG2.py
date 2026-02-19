@@ -14,7 +14,13 @@ def solve(sphere: tuple[int, int, int, int], cube: tuple[int, int, int, int]):
     """
     overlap = 0
     ### YOUR CODE GOES HERE ###
+    distance = (((sphere[0]-cube[0])**2)+((sphere[1] - cube[1])**2)+((sphere[3]-cube[3])**2))**(1/2)
+    print(distance)
+    if distance <= (sphere[3] + cube[3]):
+        overlap = 1
+
 
 
 
     return overlap
+print(solve((11,14,3,3), (9,12,11,6)))
