@@ -51,7 +51,7 @@ def test_from_problem_description():
     "└───┘└───┘└───┘└───┘└───┘└───┘"
     ]
 
-    books = ["1984", "Twilight", "The Giver", "Divergent", "Holes", "The Host", "Uglies", "Eragon"]
+    books = ["1984", "Twilight", "The Giver", "Divergent", "Holes", "The Host", "Eragon"]
     assert solve(books) == [
     "┌───┐┌───┐                         ",
     "│ D ││ T │┌───┐┌───┐               ",
