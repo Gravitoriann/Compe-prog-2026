@@ -1,4 +1,12 @@
 ## This is the template for WO1, full problem in the rulebook ##
+def time(distance, initial_speed, stamina, second_speed):
+    time1 = 0
+    if stamina > distance:
+        time1 = distance/(initial_speed/3.6)
+    else:
+        time1 += stamina/(initial_speed/3.6)
+        time1 += (distance-stamina)/(second_speed/3.6)
+    return time1
 
 def solve(distance: int, skaters: list[str], initial_speed: list[float], stamina: list[int], second_speed: list[float]):
     """
@@ -15,8 +23,15 @@ def solve(distance: int, skaters: list[str], initial_speed: list[float], stamina
         str: The name of the athlete followed by their time in seconds with 2 decimals
     """
     winner = ""
+    best_time = 9999
+    for (index,skater) in enumerate(skaters):
+        if time(distance, initial_speed[index], stamina[index], second_speed[index]) < best_time:
+            best_time = time(distance, initial_speed[index], stamina[index], second_speed[index])
+            winner = f"{skater}, {round(best_time, 2)}s"
+
 
     
 
     
     return winner
+
